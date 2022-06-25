@@ -1,0 +1,19 @@
+#!/bin/sh
+
+CONFIG=$HOME/.config/a2os
+A2OS=/usr/lib/a2os
+
+if [ -f $CONFIG/workdir ]; then
+    WD=`cat $CONFIG/workdir`
+else
+    WD=$HOME/a2os
+    mkdir -p $CONFIG $WD/Linux64/work
+    echo $WD > $CONFIG/workdir
+
+    ln -s $A2OS/Linux64/bin        "$WD"/Linux64/
+    ln -s $A2OS/Linux64/oberon.ini "$WD"/Linux64/
+    ln -s $A2OS/source             "$WD"/
+fi
+
+cd "$WD"/Linux64
+$A2OS/Linux64/oberon run $A2OS/Linux64/a2.txt
