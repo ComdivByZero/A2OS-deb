@@ -1,7 +1,7 @@
 #!/bin/bash
 
 NAME=a2os
-VERSION=2.cea01313.0
+VERSION=3.216a445e.0
 HOMEPAGE=https://gitlab.inf.ethz.ch/felixf/oberon
 MAINTAINER_0="ComDiv <ComDivByZero@yandex.ru>"
 
@@ -16,7 +16,7 @@ CURD="$(pwd)"
 copy() {
     local LINUX=$1
 
-    cp -r source $LINUX $A2OS$A2P/
+    cp -r source data $LINUX $A2OS$A2P/
     rm $A2OS$A2P/$LINUX/a2.sh
     cp a2os $A2OS$A2SH
 

@@ -20,6 +20,7 @@ fi
 if [ ! -d "$WD"/$LINUX ]; then
     mkdir -p "$WD"/$LINUX
 
+    ln -s $A2OS/data              "$WD"/
     ln -s $A2OS/$LINUX/bin        "$WD"/$LINUX/
     cp    $A2OS/$LINUX/oberon.ini "$WD"/$LINUX/
 fi
