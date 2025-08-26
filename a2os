@@ -7,8 +7,8 @@ if [ -f $CONFIG/workdir ]; then
     WD=`cat $CONFIG/workdir`
 else
     WD=$HOME/a2os
-    echo $WD > $CONFIG/workdir
     mkdir -p $CONFIG
+    echo $WD > $CONFIG/workdir
 fi
 
 if [ -d $A2OS/Linux64 ]; then

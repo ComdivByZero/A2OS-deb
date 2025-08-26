@@ -1,9 +1,9 @@
 #!/bin/bash
 
 NAME=a2os
-VERSION=1.7d61aad6.0
-HOMEPAGE=http://cas.inf.ethz.ch/projects/a2
-MAINTAINER_0="Comdiv <ComdivByZero@yandex.ru>"
+VERSION=2.cea01313.0
+HOMEPAGE=https://gitlab.inf.ethz.ch/felixf/oberon
+MAINTAINER_0="ComDiv <ComDivByZero@yandex.ru>"
 
 TMP=/tmp/a2os-make-deb
 A2OS=$TMP/$NAME-$VERSION
@@ -68,14 +68,24 @@ Installed-Size: ${SIZE}
 Architecture: ${ARCH}
 Depends: libc6
 Recommends: libx11-6, libnotify-bin
-Description: A2 Operating System, written on Active Oberon
- Operating System, written in ETH on Active Oberon.
- Also available as an application under host OS.
+Description: A2 Operating System, written in Active Oberon, as an application
+ Operating System, written in ETH in Active Oberon.
+ Available as an application under host OS.
 EOF
 }
 
 makeChangelogAndCopyright() {
     gzip -9cn - > $DOC/changelog.gz << EOF
+ ${NAME} (3.216a445e.0) unstable; urgency=low
+  * -
+
+ -- ${MAINTAINER_0} Tuesday, 26 Aug 2025 00:00:00 +0200
+
+ ${NAME} (2.cea01313.0) unstable; urgency=low
+  * -
+
+ -- ${MAINTAINER_0} Friday, 28 Jul 2023 00:00:00 +0200
+
  ${NAME} (1.7d61aad6.0) unstable; urgency=low
   * Basic Unix AR archive packing and unpacking
 
